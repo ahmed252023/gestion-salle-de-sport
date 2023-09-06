@@ -1,0 +1,50 @@
+<div class="container mt-4" >
+ 
+    <div class="card">
+            <h1>Member Liste</h1>
+     
+    
+    </div>
+    <div>
+     
+     
+        <div class="container mt-4" >
+     
+            <h1>Member Table</h1>
+     
+     
+     
+     
+        <table class="table">
+            <thead>
+             <h1 *ngIf="!isResultLoaded">Loading.................</h1>
+            
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Nom Member</th>
+                <th scope="col">Prenom Member</th>
+                
+              </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let MemberItem of MemberArray">
+     
+                <th scope="row">{{MemberItem.id  }}</th>
+                <td>{{MemberItem.nom  | uppercase}}</td>
+                <td>{{MemberItem.prenom }}</td>
+                
+                <td>
+                  
+                  
+                  <button type="button" class="btn btn-danger" (click)="setDelete(MemberItem)">Delete</button>
+                
+                </td>
+              </tr>
+              
+            </tbody>
+          </table>
+     
+     
+        </div>
+    </div>
+</div>

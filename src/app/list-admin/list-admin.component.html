@@ -1,0 +1,50 @@
+<div class="container mt-4" >
+ 
+    <div class="card">
+            <h1>Admin Liste</h1>
+     
+    
+    </div>
+    <div>
+     
+     
+        <div class="container mt-4" >
+     
+            <h1>Admin Table</h1>
+     
+     
+     
+     
+        <table class="table">
+            <thead>
+             <h1 *ngIf="!isResultLoaded">Loading.................</h1>
+            
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Nom Admin</th>
+                <th scope="col">Prenom Admin</th>
+                
+              </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let AdminItem of AdminArray">
+     
+                <th scope="row">{{AdminItem.id  }}</th>
+                <td>{{AdminItem.nom  | uppercase}}</td>
+                <td>{{AdminItem.prenom }}</td>
+                
+                <td>
+                  
+                  
+                  <button type="button" class="btn btn-danger" (click)="setDelete(AdminItem)">Delete</button>
+                
+                </td>
+              </tr>
+              
+            </tbody>
+          </table>
+     
+     
+        </div>
+    </div>
+</div>
